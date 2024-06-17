@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://daif24gywvlip"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_0gg7t"]
+
+[resource]
+script = ExtResource("1_0gg7t")
+question_info = "Assinale a alternativa em que o plural está incorreto:"
+type = 0
+options = Array[String](["velozeis", "leões", "plantões", "vapores"])
+correct = "velozeis"

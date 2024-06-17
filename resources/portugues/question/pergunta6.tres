@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bbjhsnpi1shdu"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_eg2s2"]
+
+[resource]
+script = ExtResource("1_eg2s2")
+question_info = "\"Na casa de Pedro, há muitos __________.\""
+type = 0
+options = Array[String](["cachorros", "cachorro", "cachorra", "cachorrinho"])
+correct = "cachorros"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dmkymgyiwma5i"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_afjeu"]
+
+[resource]
+script = ExtResource("1_afjeu")
+question_info = "Qual das opções abaixo é um sinônimo da palavra \"alegre\"?"
+type = 0
+options = Array[String](["triste", "contente", "bravo", "calado"])
+correct = "contente"

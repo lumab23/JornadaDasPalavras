@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dldetsjaf1mum"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_0nq1x"]
+
+[resource]
+script = ExtResource("1_0nq1x")
+question_info = "A divisão silábica não está correta em:"
+type = 0
+options = Array[String](["mne-mô-ni-ca", "gno-mo", "a-bdi-car", "man-hã"])
+correct = "a-bdi-car"

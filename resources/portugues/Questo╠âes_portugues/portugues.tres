@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizPortugues" load_steps=11 format=3 uid="uid://sf10ds3joyxg"]
+
+[ext_resource type="Script" path="res://scripts/portugues.gd" id="1_kd5au"]
+[ext_resource type="Resource" uid="uid://dmkymgyiwma5i" path="res://resources/portugues/question/pergunta1.tres" id="1_vou28"]
+[ext_resource type="Resource" uid="uid://c17fdlyfx8aae" path="res://resources/portugues/question/pergunta2.tres" id="2_4abgt"]
+[ext_resource type="Resource" uid="uid://c4aqokn1jk7jw" path="res://resources/portugues/question/pergunta3.tres" id="3_0pkkj"]
+[ext_resource type="Resource" uid="uid://dkwcbajlkkfo4" path="res://resources/portugues/question/pergunta4.tres" id="4_b2yrn"]
+[ext_resource type="Resource" uid="uid://daif24gywvlip" path="res://resources/portugues/question/pergunta5.tres" id="5_834we"]
+[ext_resource type="Resource" uid="uid://bbjhsnpi1shdu" path="res://resources/portugues/question/pergunta6.tres" id="6_me4mf"]
+[ext_resource type="Resource" uid="uid://muubk8aaustm" path="res://resources/portugues/question/pergunta7.tres" id="7_ij11f"]
+[ext_resource type="Resource" uid="uid://dldetsjaf1mum" path="res://resources/portugues/question/pergunta8.tres" id="8_dn12c"]
+[ext_resource type="Resource" uid="uid://d12kwwg0452dd" path="res://resources/portugues/question/pergunta9.tres" id="9_j212t"]
+
+[resource]
+script = ExtResource("1_kd5au")
+questions = Array[Resource("res://scripts/question.gd")]([ExtResource("1_vou28"), ExtResource("2_4abgt"), ExtResource("3_0pkkj"), ExtResource("4_b2yrn"), ExtResource("5_834we"), ExtResource("6_me4mf"), ExtResource("7_ij11f"), ExtResource("8_dn12c"), ExtResource("9_j212t")])

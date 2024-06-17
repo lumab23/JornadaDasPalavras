@@ -1,0 +1,126 @@
+[gd_scene load_steps=13 format=3 uid="uid://b10smkg6qq1fl"]
+
+[ext_resource type="Texture2D" uid="uid://c0wmin8xndqgx" path="res://assets/sprites/objetos/coin/tile000.png" id="1_1feoe"]
+[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="1_1hqgb"]
+[ext_resource type="Texture2D" uid="uid://dxwtnhsl16s3h" path="res://assets/sprites/objetos/coin/tile001.png" id="2_gnynb"]
+[ext_resource type="Texture2D" uid="uid://drjsirkwctri4" path="res://assets/sprites/objetos/coin/tile002.png" id="5_06mt0"]
+[ext_resource type="Texture2D" uid="uid://y5cc16uyn326" path="res://assets/sprites/objetos/coin/tile003.png" id="6_s6xh4"]
+[ext_resource type="Texture2D" uid="uid://bti1kx0t1arml" path="res://assets/sprites/objetos/heart/tile000.png" id="7_v16l8"]
+[ext_resource type="Texture2D" uid="uid://eaere8cmv2yd" path="res://assets/sprites/objetos/heart/tile001.png" id="8_36k8a"]
+[ext_resource type="Texture2D" uid="uid://dfxbi06ctdar6" path="res://assets/sprites/objetos/heart/tile002.png" id="9_b1p12"]
+[ext_resource type="Texture2D" uid="uid://bieygccku0x05" path="res://assets/sprites/objetos/heart/tile003.png" id="10_ihm0v"]
+[ext_resource type="FontFile" uid="uid://0ce36ddewmts" path="res://assets/fonts/RevMiniPixel.ttf" id="13_b0g01"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_v1opj"]
+frames = 4
+frame_0/texture = ExtResource("1_1feoe")
+frame_1/texture = ExtResource("2_gnynb")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("5_06mt0")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("6_s6xh4")
+frame_3/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_sks2y"]
+frames = 4
+speed_scale = 3.0
+frame_0/texture = ExtResource("7_v16l8")
+frame_1/texture = ExtResource("8_36k8a")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("9_b1p12")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("10_ihm0v")
+frame_3/duration = 1.0
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1hqgb")
+
+[node name="container" type="MarginContainer" parent="control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="coins_container" type="HBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="coin_icon" type="TextureRect" parent="control/container/coins_container"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = SubResource("AnimatedTexture_v1opj")
+
+[node name="coins_count" type="Label" parent="control/container/coins_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_b0g01")
+text = "0000"
+horizontal_alignment = 1
+
+[node name="score_container" type="HBoxContainer" parent="control/container"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="score_label" type="Label" parent="control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_b0g01")
+text = "SCORE:"
+
+[node name="score_counter" type="Label" parent="control/container/score_container"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_b0g01")
+text = "0000"
+horizontal_alignment = 1
+
+[node name="life_container" type="HBoxContainer" parent="control/container"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="heart_icon" type="TextureRect" parent="control/container/life_container"]
+custom_minimum_size = Vector2(10, 4)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = SubResource("AnimatedTexture_sks2y")
+
+[node name="life_separator" type="Label" parent="control/container/life_container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_b0g01")
+text = "x "
+horizontal_alignment = 1
+
+[node name="life_counter" type="Label" parent="control/container/life_container"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("13_b0g01")
+text = "03"
+horizontal_alignment = 1

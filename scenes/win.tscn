@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://blhuaqgi5017n"]
+
+[ext_resource type="Script" path="res://scripts/win.gd" id="1_sfrxr"]
+[ext_resource type="FontFile" uid="uid://bheybtu1ccei1" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_wktev"]
+[ext_resource type="AudioStream" uid="uid://cqd1ia81ukwmw" path="res://assets/music/8bit-music-for-game-68698.mp3" id="4_gm70e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx2ek"]
+bg_color = Color(0.447059, 1, 0.415686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_cxaa0"]
+Button/styles/normal = SubResource("StyleBoxFlat_vx2ek")
+
+[node name="Win" type="CanvasLayer"]
+script = ExtResource("1_sfrxr")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(700, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -299.0
+offset_top = -267.0
+offset_right = 299.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/line_spacing = 10
+theme_override_fonts/font = ExtResource("1_wktev")
+text = "Você derrotou o temido vilão Megamente
+       				       e restaurou a boa gramática
+                         com a sua ajuda!
+                              PARABÉNS!
+    "
+
+[node name="Button" type="Button" parent="CenterContainer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -372.0
+offset_right = 200.0
+offset_bottom = -337.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_cxaa0")
+theme_override_colors/font_color = Color(0.760784, 0, 0.054902, 1)
+theme_override_fonts/font = ExtResource("1_wktev")
+text = "Jogar Novamente?"
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gm70e")
+
+[connection signal="pressed" from="CenterContainer/Panel/Button" to="." method="_on_button_pressed"]

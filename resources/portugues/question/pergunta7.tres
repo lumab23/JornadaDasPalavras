@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://muubk8aaustm"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_o3774"]
+
+[resource]
+script = ExtResource("1_o3774")
+question_info = "Assinale a única alternativa em que a divisão silábica está correta:"
+type = 0
+options = Array[String](["e-ni-gma", "ar-gu-i-u", "coe-lho", "que-i-jo"])
+correct = "ar-gu-i-u"

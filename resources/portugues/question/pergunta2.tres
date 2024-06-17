@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://c17fdlyfx8aae"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_povuj"]
+
+[resource]
+script = ExtResource("1_povuj")
+question_info = "Qual das opções abaixo é um antônimo da palavra \"grande\"?"
+type = 0
+options = Array[String](["alto", "pequeno", "largo", "enorme"])
+correct = "pequeno"

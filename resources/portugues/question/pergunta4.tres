@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dkwcbajlkkfo4"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_edc0r"]
+
+[resource]
+script = ExtResource("1_edc0r")
+question_info = "O plural das palavras abaixo está CORRETO em:"
+type = 0
+options = Array[String](["quartel – quartéis", "capitão – capitões", "fogão – fogãos", "farol – faroles"])
+correct = "quartel – quartéis"

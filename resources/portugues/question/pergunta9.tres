@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://d12kwwg0452dd"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_y3xbx"]
+
+[resource]
+script = ExtResource("1_y3xbx")
+question_info = "Qual das seguintes palavras está corretamente dividida em sílabas?"
+type = 0
+options = Array[String](["fa-mi-lha", "car-ro", " es-tre-la", "si-len-cio"])
+correct = "es-tre-la"

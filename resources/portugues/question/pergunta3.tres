@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://c4aqokn1jk7jw"]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1_eiinp"]
+
+[resource]
+script = ExtResource("1_eiinp")
+question_info = "Qual das opções abaixo é um sinônimo da palavra \"rápido\"?"
+type = 0
+options = Array[String](["devagar", "lento", "veloz", "pesado"])
+correct = "veloz"

@@ -1,0 +1,173 @@
+[gd_scene load_steps=17 format=3 uid="uid://bgpvdpguao34x"]
+
+[ext_resource type="Script" path="res://scripts/title_screen.gd" id="1_4w6vd"]
+[ext_resource type="Texture2D" uid="uid://c85eqgwwd0g57" path="res://assets/sprites/background.png" id="1_sjaon"]
+[ext_resource type="Texture2D" uid="uid://cwiyrtpyf3q1x" path="res://assets/jornadatexto.tres" id="2_dpvxc"]
+[ext_resource type="FontFile" uid="uid://0ce36ddewmts" path="res://assets/fonts/RevMiniPixel.ttf" id="3_ylbst"]
+[ext_resource type="AudioStream" uid="uid://cqd1ia81ukwmw" path="res://assets/music/8bit-music-for-game-68698.mp3" id="5_74gif"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acfrl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8ecx"]
+bg_color = Color(0.858824, 0.733333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yude"]
+bg_color = Color(0.858824, 0.733333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hl61c"]
+bg_color = Color(1, 0.466667, 0.121569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.137255, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_est7t"]
+bg_color = Color(0.858824, 0.733333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+
+[sub_resource type="Theme" id="Theme_r7t2u"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0, 0.784314, 0.258824, 1)
+Button/fonts/font = ExtResource("3_ylbst")
+Button/styles/focus = SubResource("StyleBoxFlat_x8ecx")
+Button/styles/hover = SubResource("StyleBoxFlat_3yude")
+Button/styles/normal = SubResource("StyleBoxFlat_hl61c")
+Button/styles/pressed = SubResource("StyleBoxFlat_est7t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuqm7"]
+bg_color = Color(0.858824, 0.733333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifs0w"]
+bg_color = Color(0.858824, 0.733333, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xe87l"]
+bg_color = Color(1, 0.466667, 0.121569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.862745, 0.137255, 0, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xvxx7"]
+bg_color = Color(0.862745, 0.137255, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.466667, 0.121569, 1)
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="Theme" id="Theme_tru07"]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(0.905882, 0.141176, 0.0901961, 1)
+Button/fonts/font = ExtResource("3_ylbst")
+Button/styles/focus = SubResource("StyleBoxFlat_iuqm7")
+Button/styles/hover = SubResource("StyleBoxFlat_ifs0w")
+Button/styles/normal = SubResource("StyleBoxFlat_xe87l")
+Button/styles/pressed = SubResource("StyleBoxFlat_xvxx7")
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4w6vd")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_sjaon")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="gameLogo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_dpvxc")
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 260
+theme_override_styles/separator = SubResource("StyleBoxFlat_acfrl")
+
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_r7t2u")
+theme_override_font_sizes/font_size = 30
+text = "JOGAR
+"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+theme_override_styles/separator = SubResource("StyleBoxFlat_acfrl")
+
+[node name="Quit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_tru07")
+theme_override_font_sizes/font_size = 30
+text = "SAIR"
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_74gif")
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
